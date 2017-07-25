@@ -112,13 +112,24 @@ function makeGuess() {
 		
 		//I think this one isn't working		
 		if ($(this).text() == triviaQ[num].rightans) {
-			alert('good');
+			
 		}
 		else {
-			alert("nope");
+		
 		}
-		if (num num++;
-
+		if (num <= 5) {
+			num++;
+			alert("onward!");
+		}
+		else {
+			alert("Was that so hard?");
+		}
+	$("#questionShow").one("click", function() {
+		$("#questionShow").text(triviaQ[num].question);
+		shuffle(numAns);
+		showOptions();
+		makeGuess();
+	})
 		});
 };
 // On click, place the question in #questionshow
