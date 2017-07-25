@@ -66,7 +66,8 @@ var triviaQ = [
 ];
 
 // choose a question at random (or not at random)
-var num = Math.floor(Math.random() * triviaQ.length);
+//var num = Math.floor(Math.random() * triviaQ.length);
+var num = 0;
 
 // place answers in an array
 var numAns = [
@@ -76,7 +77,6 @@ var numAns = [
 	triviaQ[num].wrongans3,
 	triviaQ[num].wrongans4
 ];
-
 
 //randomize order of answers
 function shuffle(numAns) {
@@ -106,15 +106,19 @@ var currentQ = triviaQ[num].question;
 
 // listen for the clicks on answers
 function makeGuess() {
-	var currentRA = triviaQ[num].rightans;	
+	
 	// listen to all the answer, all of which have class = "option"
 	$('.option').click(function() {
 		
 		//I think this one isn't working		
-		if ($(this) == "currentRA")
+		if ($(this).text() == triviaQ[num].rightans) {
 			alert('good');
-		else 
+		}
+		else {
 			alert("nope");
+		}
+		if (num num++;
+
 		});
 };
 // On click, place the question in #questionshow
